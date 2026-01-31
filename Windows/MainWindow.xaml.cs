@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Dynamic;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
@@ -99,7 +100,7 @@ namespace PlexampRPC {
 
         public void GetAccountInfo() {
             UpdateAccountIcon();
-            StatusTextBox.Text = App.Account?.Title ?? App.Account?.Username ?? "Name";
+            StatusTextBox.Text = WebUtility.HtmlDecode(App.Account?.Title ?? App.Account?.Username ?? "Name");
 
             if (string.IsNullOrEmpty(Config.Settings.PlexAddress)) {
                 if (App.PlexResources != null)
