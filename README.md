@@ -2,6 +2,8 @@
 
 Instead of only using the host account you can now sign into the host and manually enter whatever user account name you use to listen to plexamp. Additionally I fixed some name formatting in the main window along with a sign out option that lets you re-auth with plex instead of having to delete the token file in appdata.
 
+![image](https://i.imgur.com/XdBarTN.png)
+
 # PlexampRPC
 [![Latest Release](https://img.shields.io/github/v/release/Dyvinia/PlexampRPC?style=for-the-badge&labelColor=191919&color=e5a00d&label=Release)](https://github.com/Dyvinia/PlexampRPC/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Dyvinia/PlexampRPC/total?style=for-the-badge&labelColor=191919&color=e5a00d&label=Downloads)](https://github.com/Dyvinia/PlexampRPC/releases)
