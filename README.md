@@ -22,7 +22,7 @@ PlexampRPC displays currently playing Plex music as Discord Rich Presence, while
 ## Options
 Click the gear icon on the top right to open the Settings window. Here you can change different options, change the template, and easily see the current version of PlexampRPC.
 
-![image](https://i.imgur.com/qtn8y6P.png)
+![image](https://i.imgur.com/XdBarTN.png)
 
 The config file, aswell as the thumbnail cache and the stored auth token, are stored in `%AppData%\PlexampRPC\`. Press `F12` in the app to automatically open this folder.
 
