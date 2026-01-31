@@ -37,6 +37,8 @@ namespace PlexampRPC
         public string TemplateL2 { get; set; } = "{artist}";
         public string TemplateL3 { get; set; } = "{album} ({year})";
 
+        public string ManualUsernameOverride { get; set; } = string.Empty;
+
         public string DiscordListeningTo { get; set; } = "Plexamp";
         public string DiscordCustomClientID { get; set; } = "1100233636491563069";
 
@@ -165,6 +167,14 @@ namespace PlexampRPC
                 await Task.Delay(1000);
             }
             return plexPin.AuthToken;
+        }
+        public static async Task ReAuthenticate(MainWindow mainWindow) {
+            Token = null;
+            Account = null;
+            await PlexSignIn(true);
+            mainWindow.UpdateAccountIcon();
+            PlexResources = await mainWindow.GetAccountResources();
+            mainWindow.GetAccountInfo();
         }
     }
 }
