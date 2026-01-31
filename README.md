@@ -52,7 +52,7 @@ These are all the placeholders that can be used for the template (the 3 text box
 
 > **Q:** My Plexamp can't get the now playing status, is it because I use someone else's Plex server to stream music?
 > 
-> **A:** It is. As a workaround, go to the settings window and enter in the plex username for the account you are listening on under "Username Override".
+> **A:** It is. As a workaround, go to the settings window and enable Use Local Player. (Album Art will not show up with this)
 
 > **Q:** How do I see the debug log?
 > 
