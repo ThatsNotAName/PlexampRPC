@@ -1,6 +1,6 @@
 # What this fork does
 
-Instead of only using the host account you can now sign into the host and manually enter whatever user account name you use to listen to plexamp. Additionally I fixed some name formatting in the main window along with a sign out option that lets you re-auth with plex instead of having to delete the appdata token file. 
+Instead of only using the host account you can now sign into the host and manually enter whatever user account name you use to listen to plexamp. Additionally I fixed some name formatting in the main window along with a sign out option that lets you re-auth with plex instead of having to delete the token file in appdata.
 
 # PlexampRPC
 [![Latest Release](https://img.shields.io/github/v/release/Dyvinia/PlexampRPC?style=for-the-badge&labelColor=191919&color=e5a00d&label=Release)](https://github.com/Dyvinia/PlexampRPC/releases/latest)
