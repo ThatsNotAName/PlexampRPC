@@ -37,11 +37,18 @@
                     <CheckBox x:Name="TrayCheckBox" Margin="0 0 0 0" Content="Startup in Tray" IsChecked="{Binding Path=(local:Config.StartInTray), Mode=TwoWay}" ToolTip="Starts the application in the tray when Starting on Startup"/>
                     <CheckBox x:Name="CloseTrayCheckBox" Margin="0 0 0 0" Content="Close to Tray" IsChecked="{Binding Path=(local:Config.CloseToTray), Mode=TwoWay}" ToolTip="Pressing the X button minimizes to tray"/>
 
+                    <CheckBox x:Name="CloseTrayCheckBox" Margin="0 0 0 0" Content="Close to Tray" IsChecked="{Binding Path=(local:Config.CloseToTray), Mode=TwoWay}" ToolTip="Pressing the X button minimizes to tray"/>
+
                     <CheckBox x:Name="OwnedCheckBox" Margin="0 0 0 0" Content="Owned Servers Only" IsChecked="{Binding Path=(local:Config.OwnedOnly), Mode=TwoWay}" ToolTip="Only adds servers to the list that belong to the authenticated Plex user"/>
 
                     <CheckBox x:Name="LocalCheckBox" Margin="0 0 0 0" Content="Use Local Address" IsChecked="{Binding Path=(local:Config.LocalAddress), Mode=TwoWay}" ToolTip="Use the Plex server's local IP and port"/>
 
                     <CheckBox x:Name="LocalPlayerCheckBox" Margin="0 0 0 0" Content="Use Local Player" IsChecked="{Binding Path=(local:Config.LocalPlayer), Mode=TwoWay}" ToolTip="Poll the local PlexAmp player instead of querying the Plex server"/>
+                </StackPanel>
+                <Grid Height="10"/>
+                <StackPanel>
+                    <TextBlock TextWrapping="Wrap" Text="Username Override" Foreground="#FFF1F1F1" FontSize="14" Height="20" FontWeight="Bold" VerticalAlignment="Top" ToolTip="Manually Override Plex Username"/>
+                    <TextBox Text="{Binding ManualUsernameOverride, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ToolTip="Leave empty to use your logged-in account username"/>
                 </StackPanel>
                 <Grid Height="10"/>
                 <StackPanel>
@@ -64,6 +71,7 @@
                     <TextBox x:Name="TemplateL2" Margin="0 1 0 0" HorizontalAlignment="Stretch" Text="{Binding Path=(local:Config.TemplateL2), Mode=TwoWay}" ToolTip="{}{title}, {artist}, {album}" LostFocus="Template_LostFocus" LostKeyboardFocus="Template_LostFocus"/>
                     <TextBox x:Name="TemplateL3" Margin="0 1 0 0" HorizontalAlignment="Stretch" Text="{Binding Path=(local:Config.TemplateL3), Mode=TwoWay}" ToolTip="{}{title}, {artist}, {album}"/>
                 </StackPanel>
+                <Button Content="Sign Out" Click="SignOut_Click" Margin="0,25,0,0" ToolTip="Sign out of your Plex Account"/>
             </StackPanel>
         </Grid>
     </Grid>

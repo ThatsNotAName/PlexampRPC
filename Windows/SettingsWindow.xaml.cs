@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
+using DyviniaUtils.Dialogs;
 using PlexampRPC.Utils;
 
 namespace PlexampRPC {
@@ -76,6 +77,22 @@ namespace PlexampRPC {
         private void CheckForStartup() {
             if (File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Startup), "PlexampRPC.lnk"))) {
                 StartupCheckBox.IsChecked = true;
+            }
+        }
+        private async void SignOut_Click(object sender, RoutedEventArgs e) {
+            var result = MessageBoxDialog.Show(
+                "Re-authenticate with Plex?",
+                "Sign Out",
+                this,
+                MessageBoxButton.YesNo,
+                DialogSound.Notify);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                if (Owner is MainWindow mainWindow)
+                {
+                    await App.ReAuthenticate(mainWindow);
+                }
             }
         }
 
